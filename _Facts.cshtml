@@ -1,23 +1,25 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
 @using ToSic.Razor.Blade;
-@using Connect.Koi
 
-@if(Edit.Enabled) {
-  <div style="display:block;margin-bottom:30px;">
-    <span>Hintergrundbild bearbeiten: @Edit.Toolbar(Header)</span>
-  </div>
+@{
+  var backgroundImage = Text.Has(Header.Background)
+    ? "background-image: url(" + Tags.SafeUrl(Header.Background) + "?w=1600&quality=60)"
+    : "";
 }
 
-<div class="container-outer @(Text.Has(Header.Background) ? "co-counter-background co-counter" : "co-counter" )" style="@(Text.Has(Header.Background) ? ("background-image: url(" + @Header.Background.Replace(" ", "%20") + "?w=1600&quality=60&scale=both&mode=crop)") : "" )">
+<div class='container-outer co-counter @(Text.Has(Header.Background) ? "co-counter-background " : "" )' style="@backgroundImage"
+  @Edit.TagToolbar(Header, toolbar: "settings&hover=left&autoAddMore=start")>
   <div class="container-inner">
     <div class="co-counter-wrapper">
       <div class="row">
-        @foreach (var e in AsList(Data)) {
-          <div class="co-counter-col col-12 col-sm-6 col-md-3" @Edit.TagToolbar(e)>
+        @foreach (var fact in AsList(Data)) {
+          <div class="co-counter-col col-12 col-sm-6 col-lg-3" @Edit.TagToolbar(fact, toolbar: "-layout")>
             <div class="co-counter-item">
-              <i class="co-icon fas @e.Icon fa-3x" aria-hidden="true"></i>
-              <h2><span class="counter" data-count="@e.Zahl.ToString()"></span>@Html.Raw(((Text.Has(e.Einheit)) ? "&nbsp;" + e.Einheit : ""))</h2>
-              <span>@e.Titel</span>
+              <i class="co-icon fas @fact.Icon fa-3x" aria-hidden="true"></i>
+              <h2>
+                <span class="counter" data-count="@fact.Number"></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
+              </h2>
+              <span>@fact.Title</span>
             </div>
           </div>
         }
@@ -26,14 +28,4 @@
   </div>
 </div>
 
-
-
-<link rel="stylesheet" href="@App.Path/dist/bs4.css" data-enableoptimizations="true" />
-<script type="text/javascript" src="@App.Path/dist/scripts.js" data-enableoptimizations="true"></script>
-
-@if(!Koi.Is("bs3,bs4")) {
-  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" data-enableoptimizations="true" />
-  <script src="//stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous" data-enableoptimizations="true" ></script>
-}
-
-<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" data-enableoptimizations="true" ></script>
+@RenderPage("shared/_Assets.cshtml")
