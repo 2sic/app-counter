@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.02.01" ExportDate="2020-06-24T11:51:30.3394064+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-30T12:35:39.4179092+02:00">
   <Header>
-    <App Guid="0ea6610c-ac21-43ea-ae09-636ab04e4998" />
-    <Language Default="en-US" />
+    <App Guid="87d4345d-26ff-467a-b020-080b766242b7" />
+    <Language Default="en-us" />
     <Dimensions>
       <Dimension DimensionID="104" Name="English (United States)" SystemKey="" ExternalKey="en-US" Active="true" />
       <Dimension DimensionID="171" Name="Deutsch (Deutschland)" SystemKey="" ExternalKey="de-DE" Active="true" />
@@ -143,19 +143,7 @@
             <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
           </Entity>
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="dd644f41-bd76-460d-843f-fd45bb980bbc" Json="True" KeyNumber="2006">
-            <Value Key="AddressMask" Value="" Type="String">
-              <Dimension DimensionID="104" ReadOnly="false" />
-            </Value>
             <Value Key="Decimals" Value="0" Type="Number">
-              <Dimension DimensionID="104" ReadOnly="false" />
-            </Value>
-            <Value Key="InputType" Value="" Type="String">
-              <Dimension DimensionID="104" ReadOnly="false" />
-            </Value>
-            <Value Key="ValidationRegEx" Value="" Type="String">
-              <Dimension DimensionID="104" ReadOnly="false" />
-            </Value>
-            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
           </Entity>
@@ -289,20 +277,45 @@
   </AttributeSets>
   <Entities>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="2SexyContent-App" AttributeSetName="2SexyContent-App" EntityGUID="4cf47fbc-1e7b-455e-9c2b-f83dce29e19f" Json="True" KeyNumber="121">
-      <Value Key="AllowRazorTemplates" Value="True" Type="Boolean" />
-      <Value Key="AllowTokenTemplates" Value="False" Type="Boolean" />
-      <Value Key="Description" Value="" Type="String" />
-      <Value Key="DisplayName" Value="Counter" Type="String" />
+      <Value Key="AllowRazorTemplates" Value="True" Type="Boolean">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="DisplayName" Value="Counter" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
       <Value Key="DisplayName" Value="Zähler" Type="String">
         <Dimension DimensionID="171" ReadOnly="false" />
       </Value>
-      <Value Key="Folder" Value="Counter" Type="String" />
-      <Value Key="Hidden" Value="False" Type="Boolean" />
-      <Value Key="OriginalId" Value="" Type="String" />
-      <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String" />
-      <Value Key="RequiredVersion" Value="11.00.00" Type="String" />
-      <Value Key="SupportsAjaxReload" Value="False" Type="Boolean" />
-      <Value Key="Version" Value="01.00.00" Type="String" />
+      <Value Key="Folder" Value="Counter2" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="Hidden" Value="False" Type="Boolean">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="OriginalId" Value="" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredOqtaneVersion" Value="02.02.00" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredVersion" Value="12.05.00" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
+      <Value Key="Version" Value="02.00.00" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="feb26a93-16d4-40a6-b158-607823b59186" KeyNumber="121" />
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="47ca82cc-99cc-4fa6-8bf9-ec7d5ac6c586" KeyNumber="121" />
@@ -368,6 +381,13 @@
       <Value Key="ViewNameInUrl" Value="" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="378f1e8a-ff2f-4b0c-aba4-e62ed205d4b5" Json="True">
+      <Value Key="Content" Value="null,null,null,null" Type="Entity" />
+      <Value Key="ListContent" Value="2fbcb325-12aa-4333-a5a4-f4ce7ff42b9e" Type="Entity" />
+      <Value Key="ListPresentation" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null,null,null,null" Type="Entity" />
+      <Value Key="Template" Value="079ba8ba-9e0e-40e1-a9db-be300503a8a8" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="b5e2e0dd-3abb-4a84-9af5-a39d5ff97123" AttributeSetName="ListSettings" EntityGUID="2fbcb325-12aa-4333-a5a4-f4ce7ff42b9e">
       <Value Key="Background" Value="file:4560" Type="Hyperlink" />
@@ -435,32 +455,35 @@
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="836fc1c4-046b-4abc-bc72-d71669d9d08c" Json="True">
+      <Value Key="ListContent" Value="null" Type="Entity" />
+      <Value Key="ListPresentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="079ba8ba-9e0e-40e1-a9db-be300503a8a8" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="25edd91e-d4f2-49b5-8523-eb921078c1d9" Json="True">
+      <Value Key="Content" Value="null,null,null" Type="Entity" />
+      <Value Key="ListContent" Value="null" Type="Entity" />
+      <Value Key="ListPresentation" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null,null,null" Type="Entity" />
+      <Value Key="Template" Value="079ba8ba-9e0e-40e1-a9db-be300503a8a8" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="37d2d1ef-1544-41cb-8c6e-21f2459ed5d6" Json="True">
+      <Value Key="ListContent" Value="null" Type="Entity" />
+      <Value Key="ListPresentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="079ba8ba-9e0e-40e1-a9db-be300503a8a8" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="da285ca0-fba7-437b-b371-18df8d716e50" Json="True">
+      <Value Key="Content" Value="null,null,null,null" Type="Entity" />
+      <Value Key="ListContent" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null,null,null,null" Type="Entity" />
+      <Value Key="Template" Value="079ba8ba-9e0e-40e1-a9db-be300503a8a8" Type="Entity" />
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4560" RelativePath="adam\Counter\JbO8L6oSM0OlpPTOf_Qrng\Background\ant-rozetsky-264641-unsplash.jpg" />
-    <File Id="1242" RelativePath="adam\Counter\1_SpVwANMECo7ORZaHx7JA\Backgroundimage\bart-zimny-345682.jpg" />
-    <File Id="1241" RelativePath="adam\Counter\1_SpVwANMECo7ORZaHx7JA\Hintergrundbild\asoggetti-531841-unsplash-1.jpg" />
-    <File Id="1245" RelativePath="adam\Counter\1TtGBD7Za0-NaBhAtET8CQ\Background\annie-spratt-256177.jpg" />
-    <File Id="1256" RelativePath="adam\Counter\1TtGBD7Za0-NaBhAtET8CQ\Background\ant-rozetsky-264641-unsplash.jpg" />
-    <File Id="4556" RelativePath="adam\Counter\dq_21PM5WEK7ajoeSNeQNw\Background\AdobeStock 133147 931.jpeg" />
-    <File Id="4558" RelativePath="adam\Counter\dq_21PM5WEK7ajoeSNeQNw\Background\nigel-tadyanehondo-wny6Y4MbyhA-unsplash.jpg" />
-    <File Id="1244" RelativePath="adam\Counter\hOCAaeEP-EGSYNyQsjfd-w\Background\annie-spratt-256177.jpg" />
-    <File Id="1243" RelativePath="adam\Counter\JbO8L6oSM0OlpPTOf_Qrng\Background\asoggetti-531841-unsplash.jpg" />
-    <File Id="4559" RelativePath="adam\Counter\JbO8L6oSM0OlpPTOf_Qrng\Background\asoggetti-531841-unsplash-1.jpg" />
-    <File Id="4557" RelativePath="adam\Counter\JbO8L6oSM0OlpPTOf_Qrng\Background\placeholder.jpg" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="2528" RelativePath="adam/Counter/JbO8L6oSM0OlpPTOf_Qrng/Background/" />
-    <Folder Id="2526" RelativePath="adam/Counter/1_SpVwANMECo7ORZaHx7JA/Backgroundimage/" />
-    <Folder Id="2525" RelativePath="adam/Counter/1_SpVwANMECo7ORZaHx7JA/Hintergrundbild/" />
-    <Folder Id="2532" RelativePath="adam/Counter/1TtGBD7Za0-NaBhAtET8CQ/Background/" />
-    <Folder Id="10180" RelativePath="adam/Counter/dq_21PM5WEK7ajoeSNeQNw/Background/" />
-    <Folder Id="2530" RelativePath="adam/Counter/hOCAaeEP-EGSYNyQsjfd-w/Background/" />
-    <Folder Id="2523" RelativePath="adam/Counter/" />
-    <Folder Id="2524" RelativePath="adam/Counter/1_SpVwANMECo7ORZaHx7JA/" />
-    <Folder Id="2531" RelativePath="adam/Counter/1TtGBD7Za0-NaBhAtET8CQ/" />
-    <Folder Id="10179" RelativePath="adam/Counter/dq_21PM5WEK7ajoeSNeQNw/" />
-    <Folder Id="2529" RelativePath="adam/Counter/hOCAaeEP-EGSYNyQsjfd-w/" />
-    <Folder Id="2527" RelativePath="adam/Counter/JbO8L6oSM0OlpPTOf_Qrng/" />
+    <Folder Id="13441" RelativePath="adam/Counter2/" />
   </PortalFolders>
 </SexyContent>
