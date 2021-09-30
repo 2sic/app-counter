@@ -1,3 +1,5 @@
+$counter-color : $white;
+
 .app-counter2 {
   &.app-counter2-background {
     padding: $grid-gutter-width/1;
@@ -16,9 +18,15 @@
         .app-counter2-col {
           .app-counter2-item {
             background: rgba($primary, 0.8);
-            color: #FFF;
+            color: $white;
             svg {
-              color: #FFF;
+              color: $white;
+              margin-bottom: 10px
+            };
+            .lead {
+              font-size: 2.3rem;
+              font-weight: 600;
+              margin-bottom: 10px;
             }
           }
         }

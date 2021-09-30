@@ -15,9 +15,9 @@
           <div class="app-counter2-col col-12 col-sm-6 col-lg-3" @Edit.TagToolbar(fact, toolbar: "-layout")>
             <div class="app-counter2-item">
               <i class="co-icon fas @fact.Icon fa-3x" aria-hidden="true"></i>
-              <h2>
+              <div class="lead">
                 <span class="app-counter2-js-@CmsContext.Module.Id" data-count="@fact.Number"></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
-              </h2>
+              </div>
               <span>@fact.Title</span>
             </div>
           </div>
