@@ -2,7 +2,7 @@
 @using ToSic.Razor.Blade;
 @{
   var backgroundImage = Text.Has(Header.Background)
-    ? "background-image: url(" + Link.Image(url: Header.Background, width: 1600, quality: 60) + ");"
+    ? "background-image: url(" + Link.Image(Header.Background, Settings.Images.Section) + ");"
     : "";
 }
 
