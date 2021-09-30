@@ -16,6 +16,8 @@ $counter-color : $white;
     .app-counter2-wrapper {
       .row {
         .app-counter2-col {
+          margin-bottom: $grid-gutter-width;
+
           .app-counter2-item {
             background: rgba($primary, 0.8);
             color: $white;
@@ -54,7 +56,8 @@ $counter-color : $white;
           svg {
             color: $primary;
           }
-          h2 {
+          .lead {
+            // todo: check, according to 2tl we should never use a margin-top
             margin-top: $grid-gutter-width/2;
             font-weight: bold;
           }
