@@ -11,7 +11,7 @@
     }
     
     // Activate font-Awesome 5 from the global resources and activate https://r.2sxc.org/turnon
-    page.Activate("FontAwesome5", "turnOn", "jQuery");
+    page.Activate("FontAwesome5", "turnOn");
 }
 
 @* show warning for admin if koi.json is missing *@
@@ -21,7 +21,7 @@
     @Html.Raw(Connect.Koi.Messages.OnlyAdminsSeeThis)
   </div>
 }
-@* todo: @2mh - rename param "moduleId"*@
-<turnOn turn-on='{ "run": "window.appCounter2.init()", "data": { "moduleId": "app-counter2-js-@CmsContext.Module.Id" } }'></turnOn>
+
+<turnOn turn-on='{ "run": "window.appCounter2.init()", "data": { "domId": "app-counter2-js-@CmsContext.Module.Id" } }'></turnOn>
 <script src="@App.Path/bs3/dist/scripts.min.js" data-enableoptimizations="true" ></script>
 <link rel="stylesheet" href="@App.Path/bs3/dist/styles.min.css" data-enableoptimizations="true" />

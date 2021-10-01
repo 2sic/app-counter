@@ -1,19 +1,19 @@
 var winAny = window as any;
 winAny.appCounter2 ??= {};
 winAny.appCounter2.init ??= initAppCounter2;
-winAny.appCounter2.moduleIds ??= [];
+winAny.appCounter2.domIds ??= [];
 
-function initAppCounter2({ moduleId } : { moduleId: string }) {
-  winAny.appCounter2.moduleIds.push(moduleId);
-  checkCounter();
+function initAppCounter2({ domId } : { domId: string }) {
+  winAny.appCounter2.domIds.push(domId);
+  checkCounters();
 }
 
-window.addEventListener('scroll', () => checkCounter());
+window.addEventListener('scroll', () => checkCounters());
 
-function checkCounter() {
-  winAny.appCounter2.moduleIds
-    .forEach((moduleId: string) => {
-      Array.from(document.getElementsByClassName(moduleId))
+function checkCounters() {
+  winAny.appCounter2.domIds
+    .forEach((domId: string) => {
+      Array.from(document.getElementsByClassName(domId))
       .forEach((counter: HTMLElement) => {
           if (!counter.classList.contains('app-counter2-js-seen') && isInViewport(counter)) {
             startCounter(counter, counter.getAttribute('data-count'), 2000);
