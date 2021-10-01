@@ -1,6 +1,6 @@
 <image src="app-icon.png" align="right" width="200px">
 
-# Counter App 2 for .net CMSs
+# Counter 2 App for .net CMSs
 
 > This is a [2sxc](https://2sxc.org) App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
 
@@ -29,3 +29,10 @@ A Fact/Number Counter App to show facts in a dynamic way
 The Counter App doesn't use any app settings or app resources.
 
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
+
+## History
+
+* 2021-09 v3
+    * Updated to best-practices of 2sxc 12.05
+    * Hybrid, so it works with Oqtane
+    * Tested to look good on Bootstrap5
