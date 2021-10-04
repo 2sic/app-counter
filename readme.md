@@ -24,7 +24,7 @@ A Fact/Number Counter App to show facts in a dynamic way
 | Bootstrap 5         | ✔️    | Works well, but not optimized
 
 
-## Customize the app
+## Customize the App
 
 The Counter App doesn't use any app settings or app resources.
 
