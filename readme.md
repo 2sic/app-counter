@@ -16,8 +16,8 @@ A Fact/Number Counter App to show facts in a dynamic way
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wD0h-932) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/counter2-app-for-dnn)
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/counter2-app-for-dnn)
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/counter2-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/counter2-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✅    | 
 | Bootstrap 4         | ✅    |
