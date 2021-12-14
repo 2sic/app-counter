@@ -21,8 +21,7 @@ A Fact/Number Counter App to show facts in a dynamic way
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 3         | ✅    | 
 | Bootstrap 4         | ✅    |
-| Bootstrap 5         | ✔️    | Works well, but not optimized
-
+| Bootstrap 5         | ✅    |
 
 ## Customize the App
 
