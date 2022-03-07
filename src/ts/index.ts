@@ -14,8 +14,8 @@ function checkCounters() {
   winAny.appCounter2.domIds
     .forEach((domId: string) => {
       Array.from(document.getElementsByClassName(domId))
-      .forEach((counter: HTMLElement) => {
-          if (!counter.classList.contains('app-counter2-js-seen') && isInViewport(counter)) {
+        .forEach((counter: HTMLElement) => {
+          if (!counter.classList.contains('app-counter2-js-seen') && isElementInViewport(counter)) {
             startCounter(counter, counter.getAttribute('data-count'), 2000);
             counter.classList.add('app-counter2-js-seen')
           }
@@ -23,12 +23,15 @@ function checkCounters() {
   });
 }
 
-function isInViewport(counter: HTMLElement) {
-  var elementTop = counter.getBoundingClientRect().top;
-  var elementBottom = elementTop + counter.getBoundingClientRect().bottom;
-  var viewportTop = window.scrollY;
-  var viewportBottom = viewportTop + window.innerHeight;
-  return elementBottom > viewportTop && elementTop < viewportBottom;
+function isElementInViewport (counter: HTMLElement) {
+  var rect = counter.getBoundingClientRect();
+
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
 function startCounter(counter: any, lastVal: any, duration: any) {
