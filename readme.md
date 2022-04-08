@@ -31,7 +31,10 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* 2021-09 v3
+* 2021-09 v2.0.0
     * Updated to best-practices of 2sxc 12.05
     * Hybrid, so it works with Oqtane
     * Tested to look good on Bootstrap5
+
+* 2022-04 v2.2.0
+    * Changed services to use ToSic.Sxc.Services
