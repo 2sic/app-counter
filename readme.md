@@ -38,3 +38,4 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 * 2022-04 v2.2.0
     * Changed services to use ToSic.Sxc.Services
+    * Activated image configuration
