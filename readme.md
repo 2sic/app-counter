@@ -39,3 +39,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * 2022-04 v2.2.0
     * Changed services to use ToSic.Sxc.Services
     * Activated image configuration
+* 2022-06 v2.3.0
+    * Replaced all base classes with their 2sxc 14 equivalents
+    * Removed all GetService<> and switched to the new ServiceKit14
+    * Changed all toolbars to use the IToolbarService

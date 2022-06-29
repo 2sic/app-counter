@@ -1,4 +1,4 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
 @{
   var backgroundImage = Text.Has(Header.Background)
@@ -6,15 +6,19 @@
     : "";
   var facts = AsList(Data);
   var domId = "app-counter2-js-" + CmsContext.Module.Id;
+
+  var factToolbar = Kit.Toolbar.Default().Layout("-");
+
+  var headerToolbar = Kit.Toolbar.Default().Settings(hover: "left", autoAddMore: "start");
 }
 
 <div class='app-counter2 mb-4 @(Text.Has(Header.Background) ? "app-counter2-background " : "" )' style="@backgroundImage"
-  @Edit.TagToolbar(Header, toolbar: "settings&hover=left&autoAddMore=start")>
+  @headerToolbar.For(Header)>
   <div class="app-counter2-wrapper">
     <div class="row justify-content-center">
       @* Show Facts*@
       @foreach (var fact in facts) {
-        <div class="app-counter2-col col-12 col-sm-6 col-lg-3" @Edit.TagToolbar(fact, toolbar: "-layout")>
+        <div class="app-counter2-col col-12 col-sm-6 col-lg-3" @factToolbar.For(fact)>
           <div class="app-counter2-item">
             <i class="co-icon fas @fact.Icon fa-3x" aria-hidden="true"></i>
             <div class="lead">
