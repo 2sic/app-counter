@@ -1,40 +1,36 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorTyped
 @using ToSic.Razor.Blade;
 @{
-  var backgroundImage = Text.Has(Header.Background)
-    ? "background-image: url(" + Link.Image(Header.Background, Settings.Images.Section) + ");"
-    : "";
-  var facts = AsList(Data);
-  var domId = "app-counter2-js-" + CmsContext.Module.Id;
+  var facts = MyItems;
+
+  var counterJsAttribute = "app-counter2-js-" + UniqueKey;
+  var backgroundImage = MyHeader.IsNotEmpty("Background")
+  ? "background-image: url(" + Link.Image(MyHeader.Url("Background"), AllSettings.String("Images.Section")) + ");"
+  : "";
 
   var factToolbar = Kit.Toolbar.Default().Layout("-");
-
   var headerToolbar = Kit.Toolbar.Default().Settings(hover: "left", autoAddMore: "start");
+  var textWhite = (MyHeader.Bool("TextColor") ? "text-white" : "");
 }
 
-
-<div class='app-counter2 mb-4 @(Text.Has(Header.Background) ? "app-counter2-background " : "" )' style="@backgroundImage"
-  @headerToolbar.For(Header)>
+<div class='app-counter2 mb-4 @MyHeader.IsNotEmpty("Background") ? "app-counter2-background " : "" )' style="@backgroundImage"
+  @headerToolbar.For(MyHeader)>
   <div class="app-counter2-wrapper">
     <div class="row justify-content-center">
       @* Show Facts*@
       @foreach (var fact in facts) {
         <div class="app-counter2-col col-12 col-sm-6 col-lg-3" @factToolbar.For(fact)>
           <div class="app-counter2-item">
-            <i class="co-icon fas @fact.Icon fa-3x" aria-hidden="true"></i>
-            <div class="lead">
-              <span class="@domId" data-count="@fact.Number"></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
+            <i class='co-icon fas @fact.String("Icon") fa-3x' aria-hidden="true"></i>
+            <div class="lead @textWhite">
+              <span class="@counterJsAttribute" data-count='@fact.Int("Number")'></span>@(Text.Has(fact.String("Unit")) ? " " + fact.String("Unit") : "")
             </div>
-            <span>@fact.Title</span>
+            <span class="@textWhite">@fact.Get("Title")</span>
           </div>
         </div>
-      }
-      @* Show Placeholder for admins in case no facts exist *@
-      @if (!facts.Any() && Edit.Enabled) {
-        <div>hello</div>
       }
     </div>
   </div>
 </div>
 
-@Html.Partial("Facts.PartAssets.cshtml", new { DomId = domId })
+@Html.Partial("../bs5/Assets.cshtml", new { counterJsAttribute })

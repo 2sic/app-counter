@@ -25,7 +25,7 @@
             <div class="h2 @textWhite">
               <span class='@counterJsAttribute h2 @textWhite' data-count='@fact.Int("Number")'></span>@(Text.Has(fact.String("Unit")) ? " " + fact.String("Unit") : "")
             </div>
-            <span>@fact.Title</span>
+            <span>@fact.Get("Title")</span>
           </div>
         </div>
       }
@@ -37,7 +37,7 @@
   <img loading="lazy" class="d-flex bg-img" src='@Link.Image(MyHeader.Url("Background"), AllSettings.String("Images.Section"))'>
 }
 
-@Html.Partial("Facts.PartAssets.cshtml", new { counterJsAttribute })
+@Html.Partial("Assets.cshtml", new { counterJsAttribute })
 
 @if(MyHeader.IsNotEmpty("Background")) {
   <style>
