@@ -13,7 +13,7 @@
 }
 
 <div class="app-counter2" @Kit.Toolbar.Default(MyHeader)>
-  @if(Text.Has(MyHeader.String("Title")) && MyHeader.Bool("HideTitle") != true) {
+  @if (Text.Has(MyHeader.String("Title")) && MyHeader.Bool("HideTitle") != true) {
     <h2 class="text-center mb-3 mb-lg-4 @textWhite">@MyHeader.String("Title")</h2>
   }
   <div class='app-counter2-wrapper @(Text.Has(MyHeader.String("Background")) ? "container" : " ")'>
@@ -33,13 +33,13 @@
   </div>
 </div>
 
-@if(MyHeader.IsNotEmpty("Background")) {
+@if (MyHeader.IsNotEmpty("Background")) {
   <img loading="lazy" class="d-flex bg-img" src='@Link.Image(MyHeader.Url("Background"), AllSettings.String("Images.Section"))'>
 }
 
 @Html.Partial("Assets.cshtml", new { counterJsAttribute })
 
-@if(MyHeader.IsNotEmpty("Background")) {
+@if (MyHeader.IsNotEmpty("Background")) {
   <style>
   #module-@MyContext.Module.Id {
     position:relative;
