@@ -1,5 +1,5 @@
-.co-counter {
-  &.co-counter-background {
+.app-counter2 {
+  &.app-counter2-background {
     padding: $grid-gutter-width/1;
     background-position: center center;
     background-size: Cover;
@@ -11,10 +11,10 @@
     @include media-breakpoint-up(xl) {
       padding: $grid-gutter-width * 3;
     }
-    .co-counter-wrapper {
+    .app-counter2-wrapper {
       .row {
-        .co-counter-col {
-          .co-counter-item {
+        .app-counter2-col {
+          .app-counter2-item {
             background: rgba($primary, 0.8);
             color: #fff;
             svg {
@@ -25,16 +25,16 @@
       }
     }
   }
-  .co-counter-wrapper {
+  .app-counter2-wrapper {
     .row {
       display: flex;
       justify-content: center;
-      .co-counter-col {
+      .app-counter2-col {
         margin-bottom: $grid-gutter-width/2;
         @include media-breakpoint-up(lg) {
           margin-bottom: 0;
         }
-        .co-counter-item {
+        .app-counter2-item {
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -55,5 +55,8 @@
         }
       }
     }
+  }
+  .text-white{
+    color: white;
   }
 }
