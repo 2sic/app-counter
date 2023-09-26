@@ -5,7 +5,7 @@
     ? "background-image: url(" + Link.Image(Header.Background, Settings.Images.Section) + ");"
     : "";
   var facts = AsList(Data);
-  var domId = "app-counter2-js-" + CmsContext.Module.Id;
+  var counterJsAttribute = "app-counter2-js-" + CmsContext.Module.Id;
 
   var factToolbar = Kit.Toolbar.Default().Layout("-");
 
@@ -27,7 +27,7 @@
           <div class="p-2 p-lg-3 bg-primary rounded @textWhite text-center h-100">
             <i class="co-icon fas @fact.Icon fa-3x textWhite mb-2" aria-hidden="true"></i>
             <div class="h2 @textWhite">
-              <span class="@domId h2 @textWhite" data-count="@fact.Number"></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
+              <span class="@counterJsAttribute h2 @textWhite" data-count="@fact.Number"></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
             </div>
             <span>@fact.Title</span>
           </div>
@@ -45,7 +45,7 @@
   <img loading="lazy" class="d-flex bg-img" src='@Link.Image(Header.Background, Settings.Images.Section)'>
 }
 
-@Html.Partial("Facts.PartAssets.cshtml", new { DomId = domId })
+@Html.Partial("Facts.PartAssets.cshtml", new { counterJsAttribute })
 
 @if(Text.Has(Header.Background)) {
   <style>
