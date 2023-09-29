@@ -12,7 +12,7 @@
   var textWhite = (MyHeader.Bool("TextColor") ? "text-white" : "");
 }
 
-<div class="app-counter2" @Kit.Toolbar.Default(MyHeader)>
+<div class='app-counter2 @(MyHeader.IsNotEmpty("Background") ? "app-counter2-has-background py-4" : "")' @Kit.Toolbar.Default(MyHeader)>
   @if (Text.Has(MyHeader.String("Title")) && MyHeader.Bool("HideTitle") != true) {
     <h2 class="text-center mb-3 mb-lg-4 @textWhite">@MyHeader.String("Title")</h2>
   }
@@ -31,33 +31,12 @@
       }
     </div>
   </div>
+
+  @if (MyHeader.IsNotEmpty("Background")) {
+    <img loading="lazy" class="d-flex bg-img" src='@Link.Image(MyHeader.Url("Background"), AllSettings.String("Images.Section"))'>
+  }  
 </div>
 
-@if (MyHeader.IsNotEmpty("Background")) {
-  <img loading="lazy" class="d-flex bg-img" src='@Link.Image(MyHeader.Url("Background"), AllSettings.String("Images.Section"))'>
-}
+
 
 @Html.Partial("Assets.cshtml", new { counterJsAttribute })
-
-@if (MyHeader.IsNotEmpty("Background")) {
-  <style>
-  #module-@MyContext.Module.Id {
-    position:relative;
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-  }
-  #module-@MyContext.Module.Id > .container {
-    max-width:100%!important;
-    padding:0px!important;
-  }
-  #module-@MyContext.Module.Id img.bg-img {
-    position: absolute;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    object-fit: cover;
-  }
-  </style>
-}

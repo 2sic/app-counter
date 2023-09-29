@@ -1,62 +1,54 @@
-.app-counter2 {
-  &.app-counter2-background {
-    padding: $grid-gutter-width/1;
-    background-position: center center;
-    background-size: Cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    @include media-breakpoint-up(md) {
-      padding: $grid-gutter-width * 1.5;
-    }
-    @include media-breakpoint-up(xl) {
-      padding: $grid-gutter-width * 3;
-    }
-    .app-counter2-wrapper {
-      .row {
-        .app-counter2-col {
-          .app-counter2-item {
-            background: rgba($primary, 0.8);
-            color: #fff;
-            svg {
-              color: #fff;
-            }
-          }
-        }
-      }
-    }
+.app-counter2 { 
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1.5rem 0 !important;
+
+  > .container {
+    max-width: 100%;
   }
-  .app-counter2-wrapper {
-    .row {
-      display: flex;
+
+  &.app-counter2-has-background {
+    min-height: 50vh;
+  }
+
+  img.bg-img {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .row {
+    display: flex;
+
+    &.justify-content-center {
       justify-content: center;
-      .app-counter2-col {
-        margin-bottom: $grid-gutter-width/2;
-        @include media-breakpoint-up(lg) {
-          margin-bottom: 0;
-        }
-        .app-counter2-item {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          flex-wrap: wrap;
-          height: 100%;
-          padding: 0;
-          padding: $grid-gutter-width/3;
-          @include media-breakpoint-up(md) {
-            padding: $grid-gutter-width;
-          }
-          svg {
-            color: $primary;
-          }
-          h2 {
-            margin-top: $grid-gutter-width/2;
-            font-weight: bold;
-          }
-        }
-      }
+    }
+
+    .h-100 {
+      height: 100%;
+    }
+
+    .p-2 {
+      padding: 1.5rem !important;
+    }
+
+    [class^='col-'] { 
+      float: none;
     }
   }
-  .text-white{
-    color: white;
+
+  .bg-primary {
+    color: #000;      
+  }
+
+  .text-white {
+    color: #fff;
   }
 }
