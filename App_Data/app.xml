@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-29T09:57:28.819967+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-29T10:36:18.8878158+02:00">
   <Header>
     <App Guid="87d4345d-26ff-467a-b020-080b766242b7" />
     <Language Default="en-us" />
@@ -155,6 +155,12 @@
             <Value Key="DisableTranslation" Value="False" Type="Boolean">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
+            <Value Key="HelpLink" Value="" Type="Hyperlink">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="Information" Value="" Type="String">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
             <Value Key="InputType" Value="boolean-default" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
@@ -173,6 +179,9 @@
             <Value Key="Required" Value="False" Type="Boolean">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
+            <Value Key="Tooltip" Value="" Type="String">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
             <Value Key="ValidationRegExJavaScript" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
@@ -181,14 +190,20 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Boolean" AttributeSetName="@Boolean" EntityGUID="f87d88ae-a2e9-4290-b09f-0db528ef1be7" Json="True" KeyNumber="5486">
-            <Value Key="TitleFalse" Value="" Type="String">
+            <Value Key="TitleFalse" Value="Titel shown" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleFalse" Value="Titel anzeigen" Type="String">
+              <Dimension DimensionID="171" ReadOnly="false" />
             </Value>
             <Value Key="TitleIndeterminate" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
-            <Value Key="TitleTrue" Value="" Type="String">
+            <Value Key="TitleTrue" Value="Titel hidden" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleTrue" Value="Titel ausblenden" Type="String">
+              <Dimension DimensionID="171" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
@@ -204,6 +219,12 @@
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
             <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="HelpLink" Value="" Type="Hyperlink">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="Information" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
             <Value Key="InputType" Value="boolean-default" Type="String">
@@ -224,6 +245,9 @@
             <Value Key="Required" Value="False" Type="Boolean">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
+            <Value Key="Tooltip" Value="" Type="String">
+              <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
             <Value Key="ValidationRegExJavaScript" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
@@ -232,14 +256,20 @@
             </Value>
           </Entity>
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Boolean" AttributeSetName="@Boolean" EntityGUID="8c2b96c2-f0d9-44de-9b59-7434d110ba4a" Json="True" KeyNumber="5487">
-            <Value Key="TitleFalse" Value="" Type="String">
+            <Value Key="TitleFalse" Value="Text Default" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleFalse" Value="Text Standard" Type="String">
+              <Dimension DimensionID="171" ReadOnly="false" />
             </Value>
             <Value Key="TitleIndeterminate" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
             </Value>
-            <Value Key="TitleTrue" Value="" Type="String">
+            <Value Key="TitleTrue" Value="Text White" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
+            </Value>
+            <Value Key="TitleTrue" Value="Text Weiss" Type="String">
+              <Dimension DimensionID="171" ReadOnly="false" />
             </Value>
           </Entity>
         </Attribute>
