@@ -16,17 +16,17 @@
 
 
 <div class='app-counter2 @(header.IsNotEmpty("Background") ? "app-counter2-has-background py-4" : "")' @Kit.Toolbar.Default(header)>
-  @if (Text.Has(header.Title) && header.HideTitle != true) {
+  @if (header.IsNotEmpty("Title") && header.HideTitle != true) {
     <h2 class="text-center mb-3 mb-lg-4 @textWhite">@header.Title</h2>
   }
-  <div class='app-counter2-wrapper @(Text.Has(header.Background) ? "container" : " ")'>
+  <div class='app-counter2-wrapper @(header.IsNotEmpty("Background") ? "container" : " ")'>
     <div class="row justify-content-center">
       @foreach (var fact in facts) {
         <div class="col-md-6 col-lg-3" @factToolbar.For(fact)>
           <div class="p-2 p-lg-3 bg-primary rounded @textWhite text-center h-100">
             <i class='co-icon fas @fact.Icon fa-3x textWhite mb-2' aria-hidden="true"></i>
             <div class="h2 @textWhite">
-              <span class='@counterJsAttribute h2 @textWhite' data-count='@fact.Number'></span>@(Text.Has(fact.Unit) ? " " + fact.Unit : "")
+              <span class='@counterJsAttribute h2 @textWhite' data-count='@fact.Number'></span>@(fact.IsNotEmpty("Unit") ? " " + fact.Unit : "")
             </div>
             <span>@fact.Title</span>
           </div>
