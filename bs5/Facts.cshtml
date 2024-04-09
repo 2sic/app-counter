@@ -24,7 +24,7 @@
       @foreach (var fact in facts) {
         <div class="col-md-6 col-lg-3" @factToolbar.For(fact)>
           <div class="p-2 p-lg-3 bg-primary rounded @textWhite text-center h-100">
-            <i class='co-icon fas @fact.Icon fa-3x textWhite mb-2' aria-hidden="true"></i>
+            <i class='co-icon fas @fact.Icon fa-3x @textWhite mb-2' aria-hidden="true"></i>
             <div class="h2 @textWhite">
               <span class='@counterJsAttribute h2 @textWhite' data-count='@fact.Number'></span>@(fact.IsNotEmpty("Unit") ? " " + fact.Unit : "")
             </div>
