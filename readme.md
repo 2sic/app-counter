@@ -7,11 +7,11 @@
 A Fact/Number Counter App to show facts in a dynamic way
 
 
-| Aspect              | Status | Comments or Version |
-| ------------------- | :----: | ------------------- |
+| Aspect              | Status | Comments or Version
+| ------------------- | :----: | -------------------
 | 2sxc                | ✅    | requires 2sxc v17.06.02
 | Dnn                 | ✅    | For 09.06.01
-| Oqtane 2            | ✅    | Requires v04.00+
+| Oqtane              | ✅    | Requires v04.00+
 | No jQuery           | ✅    |
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wD0h-932) on [azing.org](https://azing.org/2sxc)
