@@ -11,7 +11,7 @@ A Fact/Number Counter App to show facts in a dynamic way
 | ------------------- | :----: | -------------------
 | 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For 09.06.01
-| Oqtane              | ✅    | Requires v04.00+
+| Oqtane              | ✅    | Requires v05.00+
 | No jQuery           | ✅    |
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wD0h-932) on [azing.org](https://azing.org/2sxc)
