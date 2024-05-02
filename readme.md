@@ -7,11 +7,11 @@
 A Fact/Number Counter App to show facts in a dynamic way
 
 
-| Aspect              | Status | Comments or Version |
-| ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.03
+| Aspect              | Status | Comments or Version
+| ------------------- | :----: | -------------------
+| 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For 09.06.01
-| Oqtane 2            | ✅    | Requires v04.00+
+| Oqtane              | ✅    | Requires v04.00+
 | No jQuery           | ✅    |
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/wD0h-932) on [azing.org](https://azing.org/2sxc)
@@ -48,3 +48,7 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Changed all code to be typed
   * Remove bs3 Code and call the bs4 file
   * less duplicated code, one Assets file in bs5
+* v02.17.00 2024-04
+  * Strong Typed
+  * Auto Generated Class
+  * Typed MyItem
