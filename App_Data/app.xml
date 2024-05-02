@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-29T10:36:18.8878158+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="17.07.00" ExportDate="2024-05-02T10:33:23.7677068+02:00">
   <Header>
     <App Guid="87d4345d-26ff-467a-b020-080b766242b7" />
     <Language Default="en-us" />
@@ -207,7 +207,7 @@
             </Value>
           </Entity>
         </Attribute>
-        <Attribute StaticName="TextColor" Type="Boolean" IsTitle="false">
+        <Attribute StaticName="IsTextWhite" Type="Boolean" IsTitle="false">
           <Entity TargetType="2" AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="48eb0147-c3a1-4b2f-84a1-93ec50e752af" Json="True" KeyNumber="5487">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="104" ReadOnly="false" />
@@ -503,6 +503,9 @@
       <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="104" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
@@ -527,13 +530,13 @@
       <Value Key="RequiredOqtaneVersion" Value="04.00.00" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="16.04.00" Type="String">
+      <Value Key="RequiredVersion" Value="17.07.00" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="02.04.00" Type="String">
+      <Value Key="Version" Value="02.17.00" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
     </Entity>
@@ -634,7 +637,7 @@
       <Value Key="HideTitle" Value="False" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="TextColor" Value="True" Type="Boolean">
+      <Value Key="IsTextWhite" Value="True" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Demo Background" Type="String">
@@ -738,7 +741,7 @@
       <Value Key="Number" Value="2012" Type="Number">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="2sxc Birthyear 2sxc Birthyear 2sxc Birthyear 2sxc Birthyear" Type="String">
+      <Value Key="Title" Value="2sxc Birthyear 2sxc Birthyear" Type="String">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
       <Value Key="Unit" Value="" Type="String">
@@ -766,7 +769,7 @@
       <Value Key="HideTitle" Value="False" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="TextColor" Value="True" Type="Boolean">
+      <Value Key="IsTextWhite" Value="True" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Manually created facts" Type="String">
@@ -787,7 +790,7 @@
       <Value Key="HideTitle" Value="False" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
-      <Value Key="TextColor" Value="False" Type="Boolean">
+      <Value Key="IsTextWhite" Value="False" Type="Boolean">
         <Dimension DimensionID="104" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Test No Background" Type="String">
