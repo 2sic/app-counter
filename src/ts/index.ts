@@ -14,10 +14,12 @@ function checkCounters() {
   winAny.appCounter2.domIds
     .forEach((domId: string) => {
       Array.from(document.getElementsByClassName(domId))
-        .forEach((counter: HTMLElement) => {
-          if (!counter.classList.contains('app-counter2-js-seen') && isElementInViewport(counter)) {
-            startCounter(counter, counter.getAttribute('data-count'), 2000);
-            counter.classList.add('app-counter2-js-seen')
+        .forEach((counter) => {
+          const htmlCounter = counter as HTMLElement;
+          
+          if (!htmlCounter.classList.contains('app-counter2-js-seen') && isElementInViewport(htmlCounter)) {
+            startCounter(htmlCounter, htmlCounter.getAttribute('data-count'), 2000);
+            htmlCounter.classList.add('app-counter2-js-seen')
           }
         });
   });
